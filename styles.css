@@ -1,0 +1,47 @@
+@import url('https://fonts.cdnfonts.com/css/ff-comma');
+
+* {
+    font-family: 'FF Comma Trial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    top: 10px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;    
+    height: 100vh;   
+    background-color: #f0f0f0; 
+}
+
+#trashBin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 5%;  
+    height: 12%;  
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10; 
+}
+
+#trashBin:hover {
+    transform: scale(1.2); 
+}
