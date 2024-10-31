@@ -7,18 +7,26 @@
     box-sizing: border-box;
 }
 
+h1{
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    padding-left: 40px;
+    padding-right: 100px;
+}
+
 p{
     position: absolute;
     z-index: 10;
-    text-align: center;
-    top: 10px;
+    top: 100px;
+    padding-left: 20px;
 }
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 canvas {
@@ -29,9 +37,83 @@ canvas {
     width: 100vw;    
     height: 100vh;   
     background-color: #f0f0f0; 
+    cursor: url('assets/Pencil.png') 0 30,auto;
 }
 
-#trashBin {
+.icon-container{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 10
+}
+
+.icon-container img{
+    width: 80px;
+    height: 85px;
+    cursor: not-allowed;
+    transition: transform 0.3s ease;
+}
+
+.icon-container img:hover{
+    transform: scale(1.1);
+}
+
+#galleryOverlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#closeGallery {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 5px;
+}
+
+#galleryContent {
+    text-align: center;
+}
+
+#galleryContent img {
+    max-width: 80%;
+    max-height: 80%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#prevButton, #nextButton {
+    background-color: rgb(226, 226, 226);
+    color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#prevButton:hover, #nextButton:hover, #closeGallery:hover{
+    background-color: white;
+}
+
+/* #trashBin {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -43,5 +125,38 @@ canvas {
 }
 
 #trashBin:hover {
-    transform: scale(1.2); 
+    transform: scale(1.1); 
+} */
+
+.color-options {
+    display: none; 
+    position: absolute;
+    top: 390px;
+    right: 120px;
+    background: rgb(129, 129, 129);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 20;
 }
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+

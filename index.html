@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadness here</title>
+    <title>Place to dump your negative feelings</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <p>Press your mouse at a location you want.</p>
+    <h1>How would you describe your anger, guilt, disgust, boredom, fear, jealousy, frustratoion, inadequacy, sadness, lonliness, annoyance, shame, etc.?</h1>
 
-    <img src="./assets/trashbin.png" id="trashBin" alt="Trash Bin">
+    <div class="icon-container">
+        <img src="./assets/trashbin.png" id="trashBin" alt="Trash bin">
+        <img src="./assets/camera.png" id="cameraIcon" alt="Camera">
+        <img src="./assets/gallery.png" id="galleryIcon" alt="Gallery">
+        <img src="./assets/palette.png" id="paletteIcon" alt="Color Palette">
+    </div>
+
+    
+    <div class="color-options" id="colorOptions">
+        <div class="color-option" data-color="#000000" style="background-color: #ffffff;"></div>
+        <div class="color-option" data-color="#ffffff" style="background-color: #000000;"></div>
+        <div class="color-option" data-color="#00ffff" style="background-color: #ff0000;"></div>
+        <div class="color-option" data-color="#ff00ff" style="background-color: #00ff00;"></div>
+        <div class="color-option" data-color="#ffff00" style="background-color: #0000ff;"></div>
+        <div class="color-option" data-color="#0000ff" style="background-color: #ffff00;"></div>
+        <div class="color-option" data-color="#ff0000" style="background-color: #00ffff;"></div>
+        <div class="color-option" data-color="#00ff00" style="background-color: #ff00ff;"></div>
+    </div>
 
     <canvas id="drawingCanvas"></canvas>
+
+    <div id="galleryOverlay">
+        <span id="closeGallery">X</span>
+        <div id="galleryContent">
+            <img id="galleryImage" src="" alt="Captured Drawing">
+            <button id="prevButton">Back</button>
+            <button id="nextButton">Next</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
